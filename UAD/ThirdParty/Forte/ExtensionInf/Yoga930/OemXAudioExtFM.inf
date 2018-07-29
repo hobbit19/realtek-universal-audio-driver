@@ -1,0 +1,66 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider    = %OEM%
+ExtensionId = {86F65302-34A5-441C-8E16-C05C2D9E6151}
+DriverVer   = 06/13/2018,1.0.3.34
+CatalogFile = OemXAudioExt_fm.cat
+
+[SourceDisksNames]
+222 = %DiskId1%
+
+[SourceDisksFiles]
+SAMSfpa_17AA3812.dat=222
+SAMSfpi_17AA3812.dat=222
+SAMSfppch_17AA3812.dat=222
+configuration_17AA3812.tf=222
+
+[DestinationDirs]
+FMDAT_17AA3812.CopyList = 12 ; %windir%\system32\drivers
+FMPPDAT_17AA3812.CopyList = 11 ; %windir%\system32
+INTELTF_17AA3812.CopyList = 11,cAVS\Intel(R) Audio Service\ConfigurationFiles
+
+[FMDAT_17AA3812.CopyList]
+SAMSfpa.dat, SAMSfpa_17AA3812.dat
+SAMSfppch.dat, SAMSfppch_17AA3812.dat
+
+[FMPPDAT_17AA3812.CopyList]
+SAMSfpi.dat, SAMSfpi_17AA3812.dat
+
+[INTELTF_17AA3812.CopyList]
+configuration.tf, configuration_17AA3812.tf  
+
+[Manufacturer]
+%OEM% = DeviceExtensions,NTamd64
+
+[DeviceExtensions.NTamd64]
+%Device.ExtensionDesc% = DeviceExtension_Install_17AA3812,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_17AA3812
+
+[DeviceExtension_Install_17AA3812]
+CopyFiles = FMDAT_17AA3812.CopyList, FMPPDAT_17AA3812.CopyList, INTELTF_17AA3812.CopyList
+;;AddReg = PresetAddReg
+
+;[DeviceExtension_Install_17AA3812.HW]
+;AddReg = FriendlyName_AddReg
+
+;[FriendlyName_AddReg]
+;HKR,,FriendlyName,,%ExtendedFriendlyName%
+
+[DeviceExtension_Install_17AA3812.Components]
+AddComponent = FMAPO,,FMAPO_Install
+
+[FMAPO_Install]
+ComponentIDs = VEN_1319&AID_0001
+Description = "Fortemedia SAMSoft Effects Component"
+
+[Strings]
+OEM                  = "Fortemeida"
+Device.ExtensionDesc = "Fortemedia SAMSoft Device Extension"
+ExtendedFriendlyName = "Realtek(R) Audio"
+DiskId1              = "Fortemedia SAMSoft Audio Device Extension Installation Disk"
+
+REG_BINARY = 0x00000001
+REG_DWORD = 0x00010001
+REG_MULTI_SZ = 0x00010000
+REG_MULTI_SZ_APPEND = 0x00010008

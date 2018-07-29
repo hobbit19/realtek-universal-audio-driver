@@ -1,0 +1,2360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<srs_configuration>
+    <properties>
+        <control name="Product Name">DTS Audio (Win 10)</control>
+	<control name="UAPO3-Operating Mode">UAPO3-Baseline</control>
+	<control name="UAPO3-Speaker Type">UAPO3-Internal Stereo</control>
+        <control name="UAPO3-DSP Enable">0</control>
+        <control name="UAPO3-Metering Mode">UAPO3-Both</control>
+        <control name="UAPO3-Process Enable" public="true">1</control>
+        <control name="Default Headphone">UAPO3-Game</control>
+        <control name="SSID">00000000</control>
+    </properties>
+
+    <operating_mode>
+        <control name="UAPO3-Operating Mode">UAPO3-HPX Off</control>
+        <control name="UAPO3-Speaker Type">UAPO3-Headphone</control>
+
+        <!-- Start HPX controls -->
+        <control name="HPX-Process Enable" public="true">0</control>
+        <control name="HPX-Remap Channels" public="true">1</control>
+        <control name="HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="HPX-Headphone EQ Id" public="true">1</control>
+        <control name="HPX-Stereo Gain" public="true">0</control>
+        <control name="HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="HPX-Bypass Convolution" public="true">1</control>
+        <control name="HPX-Bypass Reverb" public="true">1</control>
+        <control name="HPX-Downmix" public="true">1</control>
+        <control name="HPX-Limiter" public="true">1</control>
+        <control name="HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2>  
+  
+    </operating_mode>
+
+    <operating_mode>
+        <control name="UAPO3-Operating Mode">UAPO3-Entertainment</control>
+        <control name="UAPO3-Speaker Type">UAPO3-Headphone</control>
+
+        <!-- Start HPX controls -->
+        <control name="HPX-Process Enable" public="true">1</control>
+        <control name="HPX-Remap Channels" public="true">1</control>
+        <control name="HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="HPX-Headphone EQ Id" public="true">1</control>
+        <control name="HPX-Stereo Gain" public="true">0</control>
+        <control name="HPX-5.1 Ch Gain" public="true">-1000</control>
+        <control name="HPX-7.1 Ch Gain" public="true">-1980</control>
+        <control name="HPX-Bypass Headphone EQ" public="true">0</control>
+        <control name="HPX-Bypass Convolution" public="true">0</control>
+        <control name="HPX-Bypass Reverb" public="true">0</control>
+        <control name="HPX-Downmix" public="true">-1</control>
+        <control name="HPX-Limiter" public="true">1</control>
+        <control name="HPX-Stereo Mode" public="true">1</control>
+        <!-- End HPX controls -->       
+
+        <chain input="Any" output="Any">
+            <process tech_id="DTS HPX" />
+        </chain>
+               
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2>
+
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2>  
+
+    </operating_mode>
+
+    <operating_mode>
+        <control name="UAPO3-Operating Mode">UAPO3-Game</control>
+        <control name="UAPO3-Speaker Type">UAPO3-Headphone</control>
+
+        <!-- Start HPX controls -->
+        <control name="HPX-Process Enable" public="true">1</control>
+        <control name="HPX-Remap Channels" public="true">1</control>
+        <control name="HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="HPX-5.1 Ch Room Model Id" public="true">2</control>
+        <control name="HPX-7.1 Ch Room Model Id" public="true">3</control>
+        <control name="HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="HPX-Headphone EQ Id" public="true">1</control>
+        <control name="HPX-Stereo Gain" public="true">0</control>
+        <control name="HPX-5.1 Ch Gain" public="true">-1000</control>
+        <control name="HPX-7.1 Ch Gain" public="true">-1980</control>
+        <control name="HPX-Bypass Headphone EQ" public="true">0</control>
+        <control name="HPX-Bypass Convolution" public="true">0</control>
+        <control name="HPX-Bypass Reverb" public="true">0</control>
+        <control name="HPX-Downmix" public="true">-1</control>
+        <control name="HPX-Limiter" public="true">1</control>
+        <control name="HPX-Stereo Mode" public="true">2</control>
+        <!-- End HPX controls -->
+
+        <chain input="Any" output="Any">
+            <process tech_id="DTS HPX" />
+        </chain>
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2>
+
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2>  
+
+    </operating_mode>
+
+    <operating_mode>
+        <control name="UAPO3-Operating Mode">UAPO3-Communications</control>
+        <control name="UAPO3-Speaker Type">UAPO3-Headphone</control>
+
+        <!-- Start HPX controls -->
+        <control name="HPX-Process Enable" public="true">1</control>
+        <control name="HPX-Remap Channels" public="true">1</control>
+        <control name="HPX-DTSCS File" public="true">3DHPv1</control>
+         <control name="HPX-5.1 Ch Room Model Id" public="true">4</control>
+        <control name="HPX-7.1 Ch Room Model Id" public="true">5</control>
+        <control name="HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="HPX-Headphone EQ Id" public="true">1</control>
+        <control name="HPX-Stereo Gain" public="true">0</control>
+        <control name="HPX-5.1 Ch Gain" public="true">-1000</control>
+        <control name="HPX-7.1 Ch Gain" public="true">-1980</control>
+        <control name="HPX-Bypass Headphone EQ" public="true">0</control>
+        <control name="HPX-Bypass Convolution" public="true">0</control>
+        <control name="HPX-Bypass Reverb" public="true">0</control>
+        <control name="HPX-Downmix" public="true">-1</control>
+        <control name="HPX-Limiter" public="true">1</control>
+        <control name="HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+
+        <chain input="Any" output="Any">
+            <process tech_id="DTS HPX" />
+        </chain>
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2>
+
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2>  
+
+    </operating_mode>
+
+    <operating_mode>
+        <control name="UAPO3-Operating Mode">UAPO3-Sports</control>
+        <control name="UAPO3-Speaker Type">UAPO3-Headphone</control>
+
+        <!-- Start HPX controls -->
+        <control name="HPX-Process Enable" public="true">1</control>      
+        <control name="HPX-Remap Channels" public="true">1</control>
+        <control name="HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="HPX-5.1 Ch Room Model Id" public="true">6</control>
+        <control name="HPX-7.1 Ch Room Model Id" public="true">7</control>
+        <control name="HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="HPX-Headphone EQ Id" public="true">1</control>
+        <control name="HPX-Stereo Gain" public="true">0</control>
+        <control name="HPX-5.1 Ch Gain" public="true">-1000</control>
+        <control name="HPX-7.1 Ch Gain" public="true">-1980</control>
+        <control name="HPX-Bypass Headphone EQ" public="true">0</control>
+        <control name="HPX-Bypass Convolution" public="true">0</control>
+        <control name="HPX-Bypass Reverb" public="true">0</control>
+        <control name="HPX-Downmix" public="true">-1</control>
+        <control name="HPX-Limiter" public="true">1</control>
+        <control name="HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+
+        <chain input="Any" output="Any">
+            <process tech_id="DTS HPX" />
+        </chain>
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2>
+
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2>  
+
+    </operating_mode>          
+
+ 
+  <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-Off</control>
+    <control name="UAPO3-Speaker Type">UAPO3-Internal Stereo</control>  
+    <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">0</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-None</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">0</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">70</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">300</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">120</control>
+    <control name="SS3D-TBHD Split Analysis Enable">0</control>
+    <control name="SS3D-Definition Enable">0</control>
+    <control name="SS3D-Definition Level" public="true">10</control>
+    <control name="SS3D-Definition Max Level">50</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">0</control>
+    <control name="SS3D-TBHD Boost Split">40</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">0</control>
+    <control name="SS3D-Space HPF Enable">0</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">80</control>
+    <control name="SS3D-WOWHD Focus Level">40</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">50</control>
+    <control name="SS3D-DC Enable">0</control>
+    <control name="SS3D-DC Level" public="true">40</control>
+    <control name="SS3D-DC Max Level">80</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">0</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">200</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">200</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+
+      <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+     
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+
+
+   <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-Off</control>
+    <control name="UAPO3-Speaker Type">UAPO3-External Stereo</control>  
+    <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">0</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-None</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">0</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">70</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">300</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">120</control>
+    <control name="SS3D-TBHD Split Analysis Enable">0</control>
+    <control name="SS3D-Definition Enable">0</control>
+    <control name="SS3D-Definition Level" public="true">10</control>
+    <control name="SS3D-Definition Max Level">50</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">0</control>
+    <control name="SS3D-TBHD Boost Split">40</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">0</control>
+    <control name="SS3D-Space HPF Enable">0</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">80</control>
+    <control name="SS3D-WOWHD Focus Level">40</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">50</control>
+    <control name="SS3D-DC Enable">0</control>
+    <control name="SS3D-DC Level" public="true">40</control>
+    <control name="SS3D-DC Max Level">80</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">0</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">-20</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">200</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">200</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+  <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+   
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+ 
+ 
+ <!--Internal speaker Operating modes default size-->
+ <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-Baseline</control>
+    <control name="UAPO3-Speaker Type">UAPO3-Internal Stereo</control>  
+    <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">1</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-WOWHDX</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">1</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">80</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">120</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">80</control>
+    <control name="SS3D-TBHD Split Analysis Enable">1</control>
+    <control name="SS3D-Definition Enable">1</control>
+    <control name="SS3D-Definition Level" public="true">10</control>
+    <control name="SS3D-Definition Max Level">50</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">1</control>
+    <control name="SS3D-TBHD Boost Split">0</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">1</control>
+    <control name="SS3D-Space HPF Enable">1</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">80</control>
+    <control name="SS3D-WOWHD Focus Level">30</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">50</control>
+    <control name="SS3D-DC Enable">1</control>
+    <control name="SS3D-DC Level" public="true">30</control>
+    <control name="SS3D-DC Max Level">70</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">1</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">1</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">-20</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">20</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">20</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+     <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+     
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+  
+<!-- Start of UAPO3-Surround -->
+ <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-Surround</control>
+    <control name="UAPO3-Speaker Type">UAPO3-Internal Stereo</control>  
+      <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">1</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-WOWHDX</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">1</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">80</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">120</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">80</control>
+    <control name="SS3D-TBHD Split Analysis Enable">1</control>
+    <control name="SS3D-Definition Enable">1</control>
+    <control name="SS3D-Definition Level" public="true">10</control>
+    <control name="SS3D-Definition Max Level">50</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">1</control>
+    <control name="SS3D-TBHD Boost Split">0</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">1</control>
+    <control name="SS3D-Space HPF Enable">1</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">40</control>
+    <control name="SS3D-WOWHD Focus Level">40</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">70</control>
+    <control name="SS3D-DC Enable">1</control>
+    <control name="SS3D-DC Level" public="true">30</control>
+    <control name="SS3D-DC Max Level">70</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">1</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">1</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">20</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">20</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+    <!-- chain elements for pre-Win8.1 -->
+  <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+     
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+
+ <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-3D</control>
+    <control name="UAPO3-Speaker Type">UAPO3-Internal Stereo</control>  
+      <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">1</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-CC3D</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">1</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">80</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">120</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">80</control>
+    <control name="SS3D-TBHD Split Analysis Enable">1</control>
+    <control name="SS3D-Definition Enable">1</control>
+    <control name="SS3D-Definition Level" public="true">10</control>
+    <control name="SS3D-Definition Max Level">50</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">1</control>
+    <control name="SS3D-TBHD Boost Split">0</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">1</control>
+    <control name="SS3D-Space HPF Enable">1</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">80</control>
+    <control name="SS3D-WOWHD Focus Level">40</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">50</control>
+    <control name="SS3D-DC Enable">1</control>
+    <control name="SS3D-DC Level" public="true">40</control>
+    <control name="SS3D-DC Max Level">70</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">1</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">1</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">20</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">20</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+    <!-- chain elements for pre-Win8.1 -->
+        <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+     
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+
+
+<!-- Start of External Speakers Operating modes Default size-->
+ <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-Baseline</control>
+    <control name="UAPO3-Speaker Type">UAPO3-External Stereo</control>  
+     <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">1</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-WOWHDX</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">1</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">80</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">120</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">80</control>
+    <control name="SS3D-TBHD Split Analysis Enable">1</control>
+    <control name="SS3D-Definition Enable">1</control>
+    <control name="SS3D-Definition Level" public="true">20</control>
+    <control name="SS3D-Definition Max Level">70</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">1</control>
+    <control name="SS3D-TBHD Boost Split">0</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">1</control>
+    <control name="SS3D-Space HPF Enable">1</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">80</control>
+    <control name="SS3D-WOWHD Focus Level">30</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">50</control>
+    <control name="SS3D-DC Enable">1</control>
+    <control name="SS3D-DC Level" public="true">30</control>
+    <control name="SS3D-DC Max Level">70</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">1</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">1</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">20</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">20</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+  <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+   
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+
+ <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-Surround</control>
+    <control name="UAPO3-Speaker Type">UAPO3-External Stereo</control>  
+    <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">1</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-WOWHDX</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">1</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">80</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">120</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">80</control>
+    <control name="SS3D-TBHD Split Analysis Enable">1</control>
+    <control name="SS3D-Definition Enable">1</control>
+    <control name="SS3D-Definition Level" public="true">10</control>
+    <control name="SS3D-Definition Max Level">70</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">1</control>
+    <control name="SS3D-TBHD Boost Split">0</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">1</control>
+    <control name="SS3D-Space HPF Enable">1</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">40</control>
+    <control name="SS3D-WOWHD Focus Level">40</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">60</control>
+    <control name="SS3D-DC Enable">1</control>
+    <control name="SS3D-DC Level" public="true">40</control>
+    <control name="SS3D-DC Max Level">70</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">1</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">1</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">20</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">20</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+    <!-- chain elements for pre-Win8.1 -->
+  <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+     
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+
+ <operating_mode> 
+    <control name="UAPO3-Operating Mode">UAPO3-3D</control>
+    <control name="UAPO3-Speaker Type">UAPO3-External Stereo</control>  
+     <!-- Start control list-->
+    <!-- ss3d-controls -->
+    <control name="SS3D-Process Enable" public="true">1</control>
+    <control name="MFX:SS3D-Main Tech">SS3D-CC3D</control>
+    <control name="MFX:SS3D-Headroom Gain">-180</control>
+    <control name="EFX:SS3D-Headroom Gain">0</control>
+    <control name="SS3D-Bypass Gain">0</control>
+    <!-- ss3d-TruVolume Controls -->
+    <control name="MFX:SS3D-TVolHD Enable" public="true">0</control>
+    
+    <control name="SS3D-TVolHD LKFS">-60</control>
+    <control name="SS3D-TVolHD Level Intensity">10</control>
+    <!-- ss3d-Common Controls -->
+    <control name="SS3D-TBHD Enable">1</control>
+    <control name="SS3D-TBHD Level" public="true">40</control>
+    <control name="SS3D-TBHD Max Level">80</control>
+    <control name="SS3D-TBHD Mode">SS3D-TBHD Stereo</control>
+    <control name="SS3D-TBHD Compressor Level">20</control>
+    <control name="SS3D-TBHD Bass Clarity Level">50</control>
+    <control name="SS3D-TBHD Level Independent Enable">0</control>
+    <control name="SS3D-TBHD Speaker Audio Custom Size">120</control>
+    <control name="SS3D-TBHD Speaker Analysis Custom Size">80</control>
+    <control name="SS3D-TBHD Split Analysis Enable">1</control>
+    <control name="SS3D-Definition Enable">1</control>
+    <control name="SS3D-Definition Level" public="true">20</control>
+    <control name="SS3D-Definition Max Level">70</control>
+    <control name="SS3D-TBHD Boost Enable" public="true">1</control>
+    <control name="SS3D-TBHD Boost Split">0</control>
+    <!-- ss3d - CC3D Controls-->
+    <control name="SS3D-CC3D Surround Boost Enable">1</control>
+    <control name="SS3D-Space HPF Enable">1</control>
+    <control name="SS3D-Space HPF Custom Freq">200</control>
+    <control name="SS3D-TruSurround Level">90</control>
+    <control name="SS3D-WOWHD SRS3D Space Level">80</control>
+    <control name="SS3D-WOWHD Focus Level">30</control>
+    <control name="SS3D-WOWHD SRS3D Center Level">50</control>
+    <control name="SS3D-DC Enable">1</control>
+    <control name="SS3D-DC Level" public="true">30</control>
+    <control name="SS3D-DC Max Level">70</control>
+    <!-- ss3d - CSHP Controls-->
+    <control name="SS3D-CSHP CS Decoder Enable">1</control>
+    <control name="SS3D-CSHP CS Decoder Mode">SS3D-Cinema</control>
+    <!-- ss3d-GEQ Controls -->
+    <control name="MFX:SS3D-GEQ Enable" public="true">0</control>
+    <control name="EFX:SS3D-GEQ Enable">0</control>
+    <control name="SS3D-GEQ 100Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 300Hz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 1kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 3kHz Gain" public="true">0</control>
+    <control name="SS3D-GEQ 10kHz Gain" public="true">0</control>
+    <!-- ss3d-Adv Gain Controls -->
+    <control name="SS3D-WOWHD Input Gain">0</control>
+    <control name="SS3D-TBHD Input Gain">0</control>
+    <control name="SS3D-TSHD Input Gain">0</control>
+    <!-- ss3d-aeq-in-gn 0.5 -->
+    <control name="SS3D-AEQ Input Gain">0</control>
+    <control name="SS3D-CSHP Input Gain">0</control>
+    <!-- ss3d-maintech-cc3d-in-gn 0.79 -->
+    <control name="SS3D-CC3D Input Gain">0</control>
+    <control name="SS3D-Tone Input Gain">0</control>
+    <control name="SS3D-GEQ Input Gain">-60</control>
+    <control name="SS3D-TBHD Reference Offset">0</control>
+    <!-- HL -->
+    <!-- ss3d-Hard Limiter Controls -->
+    <control name="MFX:SS3D-Hard Limiter Enable">1</control>
+    <control name="MFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="MFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="MFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="MFX:SS3D-Hard Limiter Delay Length">150</control>
+    <control name="EFX:SS3D-Hard Limiter Enable" public="true">1</control>
+    <control name="EFX:SS3D-Hard Limiter Boost Offset">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Enable">0</control>
+    <control name="EFX:SS3D-Hard Limiter Anticlip Level">20</control>
+    <control name="EFX:SS3D-Hard Limiter Output Gain">0</control>
+    <control name="EFX:SS3D-Hard Limiter Delay Length">150</control>
+   <!-- HPF -->
+    <!-- ss3d-HPF Controls  -->
+    <control name="MFX:SS3D-HPF Enable">0</control>
+    <control name="EFX:SS3D-HPF Enable">0</control>
+    <control name="MFX:SS3D-HPF Frequency">20</control>
+    <control name="MFX:SS3D-HPF Order">4</control>
+    <control name="EFX:SS3D-HPF Frequency">20</control>
+    <control name="EFX:SS3D-HPF Order">4</control>
+    <!-- AEQ -->
+    <!-- ss3d-AEQ Controls -->
+    <control name="MFX:SS3D-AEQ Enable">0</control>
+    <control name="EFX:SS3D-AEQ Enable">0</control>
+    <!-- ss3d-aeq-by-gn 1 -->
+    <control name="MFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="EFX:SS3D-AEQ Bypass Gain">0</control>
+    <control name="SS3D-Link PEQ Enable">0</control>
+    <!-- ss3d- PEQ/AEQ controls -->
+    <control name="SS3D-PEQ Left Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Left Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 2 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Left Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Left Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Left Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Left Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Left Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Left Band 11 Type">SS3D-High Shelf</control>
+    <control name="SS3D-PEQ Right Band 0 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 0 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 0 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 0 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 0 Type">SS3D-Low Shelf</control>
+    <control name="SS3D-PEQ Right Band 1 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 1 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 1 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 1 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 1 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 2 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 2 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 2 Gain">30</control>
+    <control name="SS3D-PEQ Right Band 2 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 2 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 3 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 3 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 3 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 3 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 3 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 4 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 4 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 4 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 4 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 4 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 5 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 5 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 5 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 5 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 5 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 6 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 6 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 6 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 6 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 6 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 7 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 7 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 7 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 7 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 7 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 8 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 8 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 8 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 8 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 8 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 9 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 9 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 9 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 9 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 9 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 10 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 10 Frequency">1000</control>
+    <control name="SS3D-PEQ Right Band 10 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 10 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 10 Type">SS3D-Traditional</control>
+    <control name="SS3D-PEQ Right Band 11 Enable">0</control>
+    <control name="SS3D-PEQ Right Band 11 Frequency">10000</control>
+    <control name="SS3D-PEQ Right Band 11 Gain">0</control>
+    <control name="SS3D-PEQ Right Band 11 Q Factor">200</control>
+    <control name="SS3D-PEQ Right Band 11 Type">SS3D-High Shelf</control>
+    <control name="MFX:SS3D-Left Output Gain">0</control>
+    <control name="MFX:SS3D-Right Output Gain">0</control>
+    <control name="EFX:SS3D-Left Output Gain">0</control>
+    <control name="EFX:SS3D-Right Output Gain">0</control>
+    <!-- End control list -->
+    <!-- chain elements for pre-Win8.1 -->
+  <!-- Start HPX controls -->
+        <control name="SFX:HPX-Process Enable" public="true">0</control>
+        <control name="SFX:HPX-Remap Channels" public="true">1</control>
+        <control name="SFX:HPX-DTSCS File" public="true">3DHPv1</control>
+        <control name="SFX:HPX-5.1 Ch Room Model Id" public="true">0</control>
+        <control name="SFX:HPX-7.1 Ch Room Model Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Room Model Id" public="true">-1</control>
+        <control name="SFX:HPX-Headphone EQ Id" public="true">1</control>
+        <control name="SFX:HPX-Stereo Gain" public="true">0</control>
+        <control name="SFX:HPX-5.1 Ch Gain" public="true">-3000</control>
+        <control name="SFX:HPX-7.1 Ch Gain" public="true">-3980</control>
+        <control name="SFX:HPX-Bypass Headphone EQ" public="true">1</control>
+        <control name="SFX:HPX-Bypass Convolution" public="true">1</control>
+        <control name="SFX:HPX-Bypass Reverb" public="true">1</control>
+        <control name="SFX:HPX-Downmix" public="true">1</control>
+        <control name="SFX:HPX-Limiter" public="true">1</control>
+        <control name="SFX:HPX-Stereo Mode" public="true">0</control>
+        <!-- End HPX controls -->
+                    
+
+        <chain_v2 position="SFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="SFX" />
+        </chain_v2> 
+     
+        <chain_v2 position="OSFX" input="Any" output="Any">
+            <process tech_id="DTS HPX" instance_id="OSFX" />
+        </chain_v2> 
+    <!-- chain elements for Win8.1 -->	
+     
+	<chain_v2 position="MFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="MFX" />
+	</chain_v2>
+	<chain_v2 position="EFX" input="Stereo" output="Stereo">  
+                <control name="EFX:SS3D-Main Tech">SS3D-None</control>
+      		<!-- don't want much in EFX -->                
+		<control name="EFX:SS3D-TVolHD Enable" public="true">0</control>
+                <control name="EFX:SS3D-TBHD Enable">0</control>
+		<control name="EFX:SS3D-Definition Enable">0</control>
+		<control name="EFX:SS3D-DC Enable">0</control>
+		<process tech_id="SRS Studio Sound" instance_id="EFX" />
+	</chain_v2>
+
+	<chain_v2 position="OMFX" input="Stereo" output="Stereo">    
+		<process tech_id="SRS Studio Sound" instance_id="OMFX" />
+	</chain_v2>
+
+  </operating_mode>
+ 
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>n2LldQ3y4wWSmpWd2VIYQEJ5Fvk=</DigestValue></Reference></SignedInfo><SignatureValue>gKQaQQvGHa+HX3I8mvPuoHRjLpRDiA0rYVJRuwpzSQHaTjkE0IoJUsqDbN/UCtR/MhusaGZ0hEJvRM97+zSTRAJaP0xSGdnDeqzFvypUudGO+qfeT8Iz0v8ISjDxuN3N7rkk4Zrj0uzbKc0Bp+sTDGvV7M1p5FPu2tCPEvPb/1AOxiTP7oN0S5HCkfFns6VxwI5ioWjA7Qnx18e8ozaXBHzDdxXLoNwAhqThL8s1ybHuRR39MJX8VHAOJIzMJkKlyDjlKDIejw6OZOirKS42hHGp+6hBLOdMMMj70cYuOuGflNWhJnh6Kb12+/Cf/r99x0Xl7WfjclkkCWdh5EL0JQ==</SignatureValue></Signature></srs_configuration>
