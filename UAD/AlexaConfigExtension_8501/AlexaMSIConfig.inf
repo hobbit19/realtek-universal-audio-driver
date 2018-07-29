@@ -1,0 +1,40 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider    = %Realtek%
+ExtensionId = {7f7901fa-ea73-4a95-bada-55bf89f37009}
+DriverVer = 07/27/2018, 1.0.0.8501
+CatalogFile = AlexaConfig.cat
+
+[Manufacturer]
+%Realtek% = DeviceExtensions,NTamd64
+
+[DeviceExtensions.NTamd64]
+%Device.ExtensionDesc% = DeviceExtensionSST_Install,HDAUDIO\FUNC_01&VEN_10EC&DEV_0298&SUBSYS_1462123D
+%Device.ExtensionDesc% = DeviceExtensionSST_Install,HDAUDIO\FUNC_01&VEN_10EC&DEV_1220&SUBSYS_14621227
+
+[DeviceExtensionSST_Install]
+AddReg = INTELSPAPORV_RTK.AddReg
+
+[INTELSPAPORV_RTK.AddReg]
+HKLM,SYSTEM\CurrentControlSet\Services\IntelAudioService\Config,"ppDllName",,"%%SystemRoot%%\system32\RTKSpeechPP.dll"
+HKLM,SYSTEM\CurrentControlSet\Services\IntelAudioService\Config,"ppDllConfigurationFile",,"%%SystemRoot%%\system32\drivers\Gen3pKey.dat"
+
+[INTELSPAPORV_RTK.AddReg.Security]
+"G:BUD:(A;CIOI;KA;;;BU)"
+
+[DeviceExtensionSST_Install.Components]
+AddComponent = RealtekSPIPDLL,,RealtekSPIPDLL_Install
+
+[RealtekSPIPDLL_Install]
+ComponentIDs = VEN_10EC&SSTPPDLL_0001
+Description = "Realtek Speech Preprocessing IP DLL Component"
+
+[Strings]
+Realtek           = "Realtek"
+Device.ExtensionDesc = "Realtek Device Extension"
+
+REG_BINARY = 0x00000001
+REG_DWORD = 0x00010001
+REG_MULTI_SZ = 0x00010000
