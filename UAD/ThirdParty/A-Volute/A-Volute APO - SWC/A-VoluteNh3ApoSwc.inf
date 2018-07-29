@@ -1,0 +1,177 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SoftwareComponent
+ClassGuid   = {5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider    = %Provider%
+DriverVer = 07/10/2018,1.1.4.0
+CatalogFile = A-VoluteNh3ApoSwc.cat
+
+[SourceDisksNames]
+222="A-Volute APO Installation Disk",,,
+
+[SourceDisksFiles]
+NAHIMICV3apo.dll=222
+NahimicService.exe=222
+NahimicService.ini=222
+NahimicServiceLoc.ini=222
+NahimicSvc32.exe=222
+NahimicSvc64.exe=222
+NAHIMICV3NSControl.dll=222
+NAHIMICV3NSControlExpert.dll=222
+
+[DestinationDirs]
+APO_CopyList       = 11          ; %windir%\system32
+Service_CopyList   = 11          ; %windir%\system32
+Service32_CopyList = 10,SysWOW64 ; %windir%\SysWOW64
+Control_CopyList   = 11          ; %windir%\system32
+
+[SignatureAttributes]
+NAHIMICV3apo.dll=SignatureAttributes.PETrust
+
+[SignatureAttributes.DRM]
+DRMLevel=1300
+
+[SignatureAttributes.PETrust]
+PETrust=true
+
+[Manufacturer]
+%Mfg% = ApoComponents,NTamd64.10.0...15063
+
+[ApoComponents.NTamd64.10.0...15063]
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0000
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0001
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0100
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0200
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0300
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0400
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0401
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_0500
+%Apo.ComponentDesc% = ApoComponent_Install,SWC\VEN_AVOL&AID_FFFF
+
+[ApoComponent_Install]
+CopyFiles = APO_CopyList,Service_CopyList,Service32_CopyList,Control_CopyList
+AddReg    = APO_AddReg,APOControl_AddReg,APOExpertControl_AddReg
+
+[ApoComponent_Install.Services]
+AddService = NahimicService, 0x00000800, Service_Install
+AddService = ,2    ; no function driver
+
+[Service_Install]
+DisplayName   = %SERVICE_DESCRIPTION%
+Description   = %SERVICE_FRIENDLY_NAME%
+ServiceType   = 0x00000010
+StartType     = 2
+ErrorControl  = 1
+ServiceBinary = """%11%\NahimicService.exe"""
+
+[APO_CopyList]
+NAHIMICV3apo.dll
+
+[Service_CopyList]
+NahimicService.exe
+NahimicService.ini
+NahimicServiceLoc.ini
+NahimicSvc64.exe
+
+[Service32_CopyList]
+NahimicSvc32.exe
+
+[Control_CopyList]
+NAHIMICV3NSControl.dll
+NAHIMICV3NSControlExpert.dll
+
+[APO_AddReg]
+; Stream effect APO COM registration
+HKCR,CLSID\%FX_STREAM_CLSID%,,,%SFX_FriendlyName%
+HKCR,CLSID\%FX_STREAM_CLSID%\InProcServer32,,0x00020000,"%%SystemRoot%%\System32\NAHIMICV3apo.dll"
+HKCR,CLSID\%FX_STREAM_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+; Mode effect APO COM registration
+HKCR,CLSID\%FX_MODE_CLSID%,,,%MFX_FriendlyName%
+HKCR,CLSID\%FX_MODE_CLSID%\InProcServer32,,0x00020000,"%%SystemRoot%%\System32\NAHIMICV3apo.dll"
+HKCR,CLSID\%FX_MODE_CLSID%\InProcServer32,ThreadingModel,,"Both"
+
+; Stream effect APO registration
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "FriendlyName", ,%SFX_FriendlyName%
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "Copyright", ,%APOCopyRight%
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "MajorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "MinorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "Flags", 0x00010001, %SFX_APO_FLAG%
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "MinInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "MaxInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "MinOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "MaxOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_STREAM_CLSID%, "APOInterface0", ,%APO_INTERFACE_SFX%
+
+; Mode effect APO registration
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "FriendlyName", ,%MFX_FriendlyName%
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "Copyright", ,%APOCopyRight%
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "MajorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "MinorVersion", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "Flags", 0x00010001, %MFX_APO_FLAG%
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "MinInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "MaxInputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "MinOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "MaxOutputConnections", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "MaxInstances", 0x00010001, 0xffffffff
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "NumAPOInterfaces", 0x00010001, 1
+HKCR,AudioEngine\AudioProcessingObjects\%FX_MODE_CLSID%, "APOInterface0", ,%APO_INTERFACE_MFX%
+
+[APOControl_AddReg]
+HKCR,CLSID\%CONTROL_CLSID%,,,"NSControl Class"
+HKCR,CLSID\%CONTROL_CLSID%\InprocServer32,,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\NAHIMICV3NSControl.dll"
+HKCR,CLSID\%CONTROL_CLSID%\InprocServer32,ThreadingModel,,"Both"
+HKCR,CLSID\%CONTROL_CLSID%\Programmable,,%FLG_ADDREG_KEYONLY%
+HKCR,CLSID\%CONTROL_CLSID%\TypeLib,,,%CONTROL_TYPELIB%
+HKCR,CLSID\%CONTROL_CLSID%\Version,,,"1.0"
+
+HKCR,CLSID\%SIMPLE_CONTROL_CLSID%,,,"NSSimpleControl Class"
+HKCR,CLSID\%SIMPLE_CONTROL_CLSID%\InprocServer32,,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\NAHIMICV3NSControl.dll"
+HKCR,CLSID\%SIMPLE_CONTROL_CLSID%\InprocServer32,ThreadingModel,,"Both"
+HKCR,CLSID\%SIMPLE_CONTROL_CLSID%\Programmable,,%FLG_ADDREG_KEYONLY%
+HKCR,CLSID\%SIMPLE_CONTROL_CLSID%\TypeLib,,,%SIMPLE_CONTROL_TYPELIB%
+HKCR,CLSID\%SIMPLE_CONTROL_CLSID%\Version,,,"1.0"
+
+[APOExpertControl_AddReg]
+HKCR,CLSID\%EXPERT_CONTROL_CLSID%,,,"NSControlExpert Class"
+HKCR,CLSID\%EXPERT_CONTROL_CLSID%\InprocServer32,,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\NAHIMICV3NSControlExpert.dll"
+HKCR,CLSID\%EXPERT_CONTROL_CLSID%\InprocServer32,ThreadingModel,,"Both"
+HKCR,CLSID\%EXPERT_CONTROL_CLSID%\Programmable,,%FLG_ADDREG_KEYONLY%
+HKCR,CLSID\%EXPERT_CONTROL_CLSID%\TypeLib,,,%EXPERT_CONTROL_TYPELIB%
+HKCR,CLSID\%EXPERT_CONTROL_CLSID%\Version,,,"1.0"
+
+[Strings]
+Provider          = "A-Volute"
+Mfg               = "A-Volute"
+Apo.ComponentDesc = "Nahimic 3 APO"
+
+FX_STREAM_CLSID   = "{670173e1-78cf-11e5-a837-0800200c9a66}"
+FX_MODE_CLSID     = "{670173e2-78cf-11e5-a837-0800200c9a66}"
+APO_INTERFACE_SFX = "{658A4077-B277-4D14-97E1-0356044D8110}"
+APO_INTERFACE_MFX = "{658A4078-B277-4D14-97E1-0356044D8110}"
+
+SFX_FriendlyName  = "Nahmic Audio Effects (stream effect)"
+MFX_FriendlyName  = "Nahmic Audio Effects (mode effect)"
+APOCopyRight      = "(c) A-Volute 2017"
+
+SFX_APO_FLAG  = "0x0000000d"
+MFX_APO_FLAG  = "0x0000000f"
+
+SERVICE_FRIENDLY_NAME = "Nahimic service"
+SERVICE_DESCRIPTION   = "Nahimic service"
+
+CONTROL_CLSID          = "{ceb2eb91-798d-11e5-a837-0800200c9a66}"
+CONTROL_TYPELIB        = "{a2b17390-78cf-11e5-a837-0800200c9a66}"
+SIMPLE_CONTROL_CLSID   = "{e5b1c2d1-798d-11e5-a837-0800200c9a66}"
+SIMPLE_CONTROL_TYPELIB = "{a2b17390-78cf-11e5-a837-0800200c9a66}"
+EXPERT_CONTROL_CLSID   = "{f3077511-798d-11e5-a837-0800200c9a66}"
+EXPERT_CONTROL_TYPELIB = "{a2b17391-78cf-11e5-a837-0800200c9a66}"
+
+REG_BINARY    = 0x00000001
+REG_DWORD     = 0x00010001
+REG_MULTI_SZ  = 0x00010000
+REG_EXPAND_SZ = 0x00020000
+
+FLG_ADDREG_KEYONLY = 0x00000010

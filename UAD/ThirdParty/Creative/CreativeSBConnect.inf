@@ -1,0 +1,75 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SoftwareComponent
+ClassGuid   = {5c4c3332-344d-483c-8739-259e934c9cc8}
+Provider    = %Creative%
+DriverVer = 07/02/2018, 2.1.1.0
+CatalogFile =CreativeSBConnect.cat
+
+[SourceDisksNames]
+222 = %DiskId1%
+
+[SourceDisksFiles]
+Creative.UWPRPCService.exe=222,x86
+
+[DestinationDirs]
+Service.x86.CopyList=11
+Service.thunk.CopyList=10,SysWOW64
+
+[Manufacturer]
+%Creative% = Components,NTx86
+%Creative% = Components,NTamd64
+
+[Components.NTx86]
+%SBConnect.ComponentDesc% = SBConnect.Component_Install.NTx86,SWC\VEN_1102&AID_FE00
+
+[Components.NTamd64]
+%SBConnect.ComponentDesc% = SBConnect.Component_Install.NTamd64,SWC\VEN_1102&AID_FE00
+
+[SBConnect.Component_Install.NTx86]
+CopyFiles = Service.x86.CopyList
+
+[SBConnect.Component_Install.NTamd64]
+CopyFiles = Service.thunk.CopyList
+
+[SBConnect.Component_Install.NTx86.Services]
+AddService = UWPService, 0x00000800, UWPService_Service_Install.NTx86
+
+[SBConnect.Component_Install.NTamd64.Services]
+AddService = UWPService, 0x00000800, UWPService_Service_Install.NTamd64
+
+[UWPService_Service_Install.NTx86]
+DisplayName    = %ServiceName%
+ServiceType    = 0x10               ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 0x02               ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %11%\Creative.UWPRPCService.exe
+
+[UWPService_Service_Install.NTamd64]
+DisplayName    = %ServiceName%
+ServiceType    = 0x10               ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 0x02               ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\SysWOW64\Creative.UWPRPCService.exe
+
+[SBConnect.Component_Install.NTx86.Software]
+AddSoftware=SBConnect,,SBConnect_Install
+
+[SBConnect.Component_Install.NTamd64.Software]
+AddSoftware=SBConnect,,SBConnect_Install
+
+[SBConnect_Install]
+SoftwareType=2
+SoftwareID=pfn://CreativeTechnologyLtd.SoundBlasterConnect_13fcda18mhdz2
+
+[Service.x86.CopyList]
+Creative.UWPRPCService.exe
+
+[Service.thunk.CopyList]
+Creative.UWPRPCService.exe
+
+[Strings]
+Creative = "Creative Technology Ltd."
+SBConnect.ComponentDesc = "Sound Blaster Connect"
+DiskId1 = "Sound Blaster Connect Installer"
+ServiceName = "UWP RPC Service"
