@@ -102,7 +102,7 @@ Github: https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 		+ ThirtyParty (Required if your OEM PC have preinstall Realtek UAD with installed audio enhancer(s))
 
-3. Type Vender ID Device ID | SubVender ID | SubSystem ID, click "Check". If HardWare ID is not found, using Universal Audio Driver Inf Editor is not supported.
+3. Type Vender ID, Device ID, SubVender ID and SubSystem ID, click "Check". If HardWare ID is not found, using Universal Audio Driver Inf Editor is not supported.
 
 	Harware ID = HDAUDIO\FUNC_01&VEN_10EC&DEV_1220&SUBSYS_1458355D
 
