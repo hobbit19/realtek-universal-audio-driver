@@ -42,9 +42,9 @@ A. Using Universal Audio Driver Inf Editor
 
 2. Open Package, click "Open Package", select the parent folder which contains Realtek folders
 
-##### Folder Struction
+	##### Folder Struction
 
-###### UAD (Parent Folder)
+	###### UAD (Parent Folder)
 
 	> Realtek (Universal Audio Driver)
 
