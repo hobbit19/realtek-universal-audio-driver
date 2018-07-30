@@ -1,0 +1,83 @@
+;===================================================================
+; Dolby DAX APO driver package
+; Copyright (c)2018, Dolby Laboratories, INC.
+;===================================================================
+[Version]
+Signature 	= "$Windows NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider 	= %ManufacturerName%
+ExtensionId = {ABBECD40-99F7-11E7-BF21-6C0B849889E1}
+CatalogFile = dax3_ext_dolbyaudio.cat
+DriverVer = 06/03/2018,2.1001.221.0
+
+[Manufacturer]
+%ManufacturerName% = DeviceExtensions,NTamd64
+
+[DeviceExtensions.NTamd64]
+%Device.ExtensionDesc% = DeviceExtension_Install,HDAUDIO\FUNC_01&VEN_10EC&DEV_0236&SUBSYS_17AA390B
+%Device.ExtensionDesc% = DeviceExtension_Install,INTELAUDIO\FUNC_01&VEN_10EC&DEV_0236&SUBSYS_17AA3921
+%Device.ExtensionDesc% = DeviceExtension_Install,HDAUDIO\FUNC_01&VEN_10EC&DEV_0236&SUBSYS_17AA3921
+
+[DeviceExtension_Install.NT]
+AddReg = PresetAddReg, DolbyAPO_AddReg
+CopyFiles = DolbyAPO_CopyFiles
+
+[PresetAddReg]
+;; render endpoint settings
+HKR,InterfaceSetting,PrimaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"ApoPreset1"                  ;; PrimaryLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SingleLineOutTopo,%REG_MULTI_SZ_APPEND%,"ApoPreset1"                   ;; SingleLineOutTopo stands for Speakers(or Redirected headphone/speaker) endpoint
+HKR,InterfaceSetting,SecondaryLineOutTopo,%REG_MULTI_SZ_APPEND%,"ApoPreset2"                ;; SecondaryLineOutTopo stands for Headphone endpoint
+
+HKR,InterfaceSetting,RearLineOutTopoSST,%REG_MULTI_SZ_APPEND%,"ApoPreset1"					;; Speakers(or Redirected headphone/speaker) endpoint with audio offloading DSP supported (Intel SST) 
+HKR,InterfaceSetting,RearLineOutTopoSST3,%REG_MULTI_SZ_APPEND%,"ApoPreset2"					;; Headphone endpoint with audio offloading DSP supported (Intel SST)
+
+HKR,InterfaceSetting,RearLineOutTopoHAP,%REG_MULTI_SZ_APPEND%,"ApoPreset1"					;; Speakers(or Redirected headphone/speaker) endpoint with audio offloading DSP supported (AMD HAP) 
+HKR,InterfaceSetting,RearLineOutTopoHAP3,%REG_MULTI_SZ_APPEND%,"ApoPreset2"					;; Headphone endpoint with audio offloading DSP supported (AMD HAP)
+
+[DolbyAPO_AddReg]
+; Add Dolby enabled device indicator string here.
+HKR, InterfaceSetting\ApoPreset1\EP\0, "{6CA6A085-3041-482B-9113-C61E7F250356},0",         ,"0.4.0"
+HKR, InterfaceSetting\ApoPreset2\EP\0, "{6CA6A085-3041-482B-9113-C61E7F250356},0",         ,"0.4.0"
+
+[DeviceExtension_Install.NT.Components]
+AddComponent = DolbyAPO_DAX3APOSVC,, DolbyAPO_ComponentInstall_DAX3APOSVC
+AddComponent = DolbyAPO_DAX3HSA,, DolbyAPO_ComponentInstall_DAX3HSA
+
+[DolbyAPO_ComponentInstall_DAX3APOSVC]
+ComponentIds = VEN_DOLBY&PID_DAX3APOSVC  ; Matches with SWC\VEN_DOLBY&PID_DAX3APOSVC
+
+[DolbyAPO_ComponentInstall_DAX3HSA]
+ComponentIds = VEN_DOLBY&PID_DAX3HSA_DolbyAudio  ; Matches with SWC\VEN_DOLBY&PID_DAX3HSA_DolbyAudio
+
+[SourceDisksNames]
+222="APO Installation Disk",,,
+
+[SourceDisksFiles]
+HDAUDIO_DEV_0236_SUBSYS_17AA390B_PCI_SUBSYS_381217AA.xml = 222
+INTELAUDIO_DEV_0236_SUBSYS_17AA3921_PCI_SUBSYS_381417AA.xml = 222
+HDAUDIO_DEV_0236_SUBSYS_17AA3921_PCI_SUBSYS_381417AA.xml = 222
+Operator_Info_Lenovo.xml = 222
+Headphone_Default_Generic_Small_DolbyAudio.xml = 222
+Headphone_Default_Generic_Medium_DolbyAudio.xml = 222
+Headphone_Default_Generic_Large_DolbyAudio.xml = 222
+Headphone_Default_Generic_Default_DolbyAudio.xml = 222
+
+[DestinationDirs]
+DolbyAPO_CopyFiles = 10,system32\dolbyaposvc
+
+[DolbyAPO_CopyFiles]
+HDAUDIO_DEV_0236_SUBSYS_17AA390B_PCI_SUBSYS_381217AA.xml
+INTELAUDIO_DEV_0236_SUBSYS_17AA3921_PCI_SUBSYS_381417AA.xml
+HDAUDIO_DEV_0236_SUBSYS_17AA3921_PCI_SUBSYS_381417AA.xml
+Operator_Info_Lenovo.xml
+Headphone_Default_Generic_Small_DolbyAudio.xml
+Headphone_Default_Generic_Medium_DolbyAudio.xml
+Headphone_Default_Generic_Large_DolbyAudio.xml
+Headphone_Default_Generic_Default_DolbyAudio.xml
+
+[Strings]
+ManufacturerName 	= "Dolby"
+Device.ExtensionDesc = "Dolby Device Extension"
+
+REG_MULTI_SZ_APPEND                           = 0x00010008
