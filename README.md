@@ -157,7 +157,7 @@ URI: ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99
 
 	`PnPUtil /i /a D:\UAD\Realtek\RealtekAPO_635\RealtekAPO.inf`
 
-	`PnPUtil /i /a D:\UAD\Realtek\RealtekASIO_4\RealtekASIO.inf`
+	`PnPUtil /i /a D:\UAD\Realtek\RealtekHSA_128\RealtekHSA.inf`
 
 	`PnPUtil /i /a D:\UAD\Realtek\RealtekService_92\RealtekService.inf`
 
