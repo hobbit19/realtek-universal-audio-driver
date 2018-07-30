@@ -1,9 +1,14 @@
 # Realtek Universal Audio Driver (UAD)
 
-Table of Contents
+## Table of Contents
+- [Lastest Infomation](#lastest-info)
 - [Download](#download)
 - [Installation](#installation)
 - [Uninstallation](#uninstallation)
+
+<h2 id="lastest-info">Lastest Infomation</h2>
+MDL:https://forums.mydigitallife.net/threads/update-realtek-high-definition-audio.72236/
+Station-Drivers: https://www.station-drivers.com/index.php?option=com_kunena&view=topic&catid=18&id=17&Itemid=858&lang=en
 
 <h2 id="download">Download</h2>
 
@@ -31,8 +36,17 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 
 * Xperi: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/realtek-universal-audio-driver/tree/master/UAD/ThirdParty/Xperi
 
-### Realtek Audio Control & HP Audio Control
+### Control Panel
 
+Realtek Audio Control
+URL: https://www.microsoft.com/en-us/store/p/realtek-audio-control/9p2b8mcsvpln
+URI <a href="ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.RealtekAudioControl_dt26b99r8h8gj">ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.RealtekAudioControl_dt26b99r8h8gj</a>
+
+HP Audio Control
+URL: https://www.microsoft.com/en-us/p/hp-audio-control/9n77pw08dt9s
+URI: <a href="ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99r8h8gj">ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99r8h8gj</a>
+
+Github:
 https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 ---------------------------------------
