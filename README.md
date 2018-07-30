@@ -30,4 +30,4 @@ https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 ## Installation
 
-pnputil /i /a <PATHTOINF>
+`pnputil /i /a <PATHTOINF>`
