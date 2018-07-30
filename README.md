@@ -36,7 +36,7 @@ Operating System: At least Windows 10 Version 1709 (64 Bit)
 ---------------------------------------
 <h2 id="notice">Notice</h2>
 
-If your PC preinstall HDA driver with a desktop version (non-UWP) of audio enhancers (apps), UAD will not work with  that desktop version of audio enhancers.
+If your PC had preinstalled HDA driver with a desktop version (non-UWP) of audio enhancers, UAD will not work with that desktop version of audio enhancers.
 
 Unintall Realtek HDA Driver first!!!
 
