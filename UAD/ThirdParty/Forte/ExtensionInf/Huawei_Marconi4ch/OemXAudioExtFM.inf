@@ -1,0 +1,135 @@
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = Extension
+ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
+Provider    = %OEM%
+ExtensionId = {86F65302-34A5-441C-8E16-C05C2D9E6151}
+DriverVer   = 06/30/2017,1.0.3.6
+CatalogFile = OemXAudioExt_fm.cat
+
+[SourceDisksNames]
+222 = %DiskId1%
+
+[SourceDisksFiles]
+SAMSfpa_19E53206.dat=222
+SAMSfpa_19E53207.dat=222
+SAMSfpa_19E53202.dat=222
+SAMSfpa_19E53203.dat=222
+SAMSfpa_19E53204.dat=222
+SAMSfpa_19E53205.dat=222
+
+[DestinationDirs]
+FMDAT_19E53206.CopyList = 12 ; %windir%\system32\drivers
+FMDAT_19E53207.CopyList = 12 ; %windir%\system32\drivers
+FMDAT_19E53202.CopyList = 12 ; %windir%\system32\drivers
+FMDAT_19E53203.CopyList = 12 ; %windir%\system32\drivers
+FMDAT_19E53204.CopyList = 12 ; %windir%\system32\drivers
+FMDAT_19E53205.CopyList = 12 ; %windir%\system32\drivers
+
+
+[FMDAT_19E53206.CopyList]
+SAMSfpa.dat, SAMSfpa_19E53206.dat 
+
+[FMDAT_19E53207.CopyList]
+SAMSfpa.dat, SAMSfpa_19E53207.dat
+
+[FMDAT_19E53202.CopyList]
+SAMSfpa.dat, SAMSfpa_19E53202.dat
+
+[FMDAT_19E53203.CopyList]
+SAMSfpa.dat, SAMSfpa_19E53203.dat
+
+[FMDAT_19E53204.CopyList]
+SAMSfpa.dat, SAMSfpa_19E53204.dat
+
+[FMDAT_19E53205.CopyList]
+SAMSfpa.dat, SAMSfpa_19E53205.dat
+
+[Manufacturer]
+%OEM% = DeviceExtensions,NTamd64.10.0...15063
+
+[DeviceExtensions.NTamd64]
+%Device.ExtensionDesc% = DeviceExtension_Install_19E53206,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_19E53206
+%Device.ExtensionDesc% = DeviceExtension_Install_19E53207,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_19E53207
+%Device.ExtensionDesc% = DeviceExtension_Install_19E53202,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_19E53202
+%Device.ExtensionDesc% = DeviceExtension_Install_19E53203,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_19E53203
+%Device.ExtensionDesc% = DeviceExtension_Install_19E53204,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_19E53204
+%Device.ExtensionDesc% = DeviceExtension_Install_19E53205,HDAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_19E53205
+
+[DeviceExtension_Install_19E53206]
+CopyFiles = FMDAT_19E53206.CopyList
+;;AddReg = PresetAddReg
+
+[DeviceExtension_Install_19E53206.HW]
+AddReg = FriendlyName_AddReg
+
+[DeviceExtension_Install_19E53207]
+CopyFiles = FMDAT_19E53207.CopyList
+;;AddReg = PresetAddReg
+
+[DeviceExtension_Install_19E53207.HW]
+AddReg = FriendlyName_AddReg
+
+[DeviceExtension_Install_19E53202]
+CopyFiles = FMDAT_19E53202.CopyList
+;;AddReg = PresetAddReg
+
+[DeviceExtension_Install_19E53202.HW]
+AddReg = FriendlyName_AddReg
+
+[DeviceExtension_Install_19E53203]
+CopyFiles = FMDAT_19E53203.CopyList
+;;AddReg = PresetAddReg
+
+[DeviceExtension_Install_19E53203.HW]
+AddReg = FriendlyName_AddReg
+
+[DeviceExtension_Install_19E53204]
+CopyFiles = FMDAT_19E53203.CopyList
+;;AddReg = PresetAddReg
+
+[DeviceExtension_Install_19E53204.HW]
+AddReg = FriendlyName_AddReg
+
+[DeviceExtension_Install_19E53205]
+CopyFiles = FMDAT_19E53203.CopyList
+;;AddReg = PresetAddReg
+
+[DeviceExtension_Install_19E53205.HW]
+AddReg = FriendlyName_AddReg
+
+[FriendlyName_AddReg]
+HKR,,FriendlyName,,%ExtendedFriendlyName%
+
+[DeviceExtension_Install_19E53206.Components]
+AddComponent = FMAPO,,FMAPO_Install
+
+[DeviceExtension_Install_19E53207.Components]
+AddComponent = FMAPO,,FMAPO_Install
+
+[DeviceExtension_Install_19E53202.Components]
+AddComponent = FMAPO,,FMAPO_Install
+
+[DeviceExtension_Install_19E53203.Components]
+AddComponent = FMAPO,,FMAPO_Install
+
+[DeviceExtension_Install_19E53204.Components]
+AddComponent = FMAPO,,FMAPO_Install
+
+[DeviceExtension_Install_19E53205.Components]
+AddComponent = FMAPO,,FMAPO_Install
+
+[FMAPO_Install]
+ComponentIDs = VEN_1319&AID_0001
+Description = "Fortemedia SAMSoft Effects Component"
+
+[Strings]
+OEM                  = "Fortemeida"
+Device.ExtensionDesc = "Fortemedia SAMSoft Device Extension"
+ExtendedFriendlyName = "Realtek(R) Audio"
+DiskId1              = "Fortemedia SAMSoft Audio Device Extension Installation Disk"
+
+REG_BINARY = 0x00000001
+REG_DWORD = 0x00010001
+REG_MULTI_SZ = 0x00010000
+REG_MULTI_SZ_APPEND = 0x00010008
