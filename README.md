@@ -78,7 +78,7 @@ https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 1. Find the Device ID that match HDXRT.inf or HDXRTSST.inf in Codec_xxxx folder
 
-  Hardware ID = HDAUDIO\FUNC_01&VEN_10EC&DEV_0887&SUBSYS_10438577
+	Hardware ID = HDAUDIO\FUNC_01&VEN_10EC&DEV_0887&SUBSYS_10438577
 
 	| Vender ID | Device ID | SubVender ID | SubSystem ID |
 	|-----------|-----------|--------------|--------------|
@@ -87,13 +87,16 @@ https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 2. Install the UAD driver (Codec_XXXX folder)
  
- HDXRT.inf
-`PnPUtil /i /a D:\UAD\Realtek\Codec_8501\HDXRT.inf`
+	 HDXRT.inf
+	 
+	`PnPUtil /i /a D:\UAD\Realtek\Codec_8501\HDXRT.inf`
  
- HDXRTSST.inf
-`PnPUtil /i /a D:\UAD\Realtek\Codec_8501\HDXRTSST.inf`
+	 HDXRTSST.inf
+	 
+	`PnPUtil /i /a D:\UAD\Realtek\Codec_8501\HDXRTSST.inf`
 
 3. Install the Realtek Device Extension (CodecExtOem_RTK_XXXX folder)
 
- HDXRTSST.inf
-`PnPUtil /i /a D:\UAD\Realtek\CodecExtOem_RTK_8492\HDX_GenericExt_RTK.inf`
+	 HDXRTSST.inf
+	 
+	`PnPUtil /i /a D:\UAD\Realtek\CodecExtOem_RTK_8492\HDX_GenericExt_RTK.inf`
