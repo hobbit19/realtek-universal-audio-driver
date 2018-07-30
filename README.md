@@ -68,6 +68,8 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 
 ### Control Panel
 
+Download form Github: https://github.com/alanfox2000/realtek-universal-audio-driver/releases
+
 Realtek Audio Control
 
 URL: https://www.microsoft.com/en-us/store/p/realtek-audio-control/9p2b8mcsvpln
@@ -79,8 +81,6 @@ HP Audio Control
 URL: https://www.microsoft.com/en-us/p/hp-audio-control/9n77pw08dt9s
 
 URI: ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99r8h8gj
-
-Github: https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 ---------------------------------------
 
