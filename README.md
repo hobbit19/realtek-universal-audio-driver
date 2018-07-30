@@ -21,3 +21,8 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 * Waves: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/realtek-universal-audio-driver/tree/master/UAD/ThirdParty/Waves
 
 * Xperi: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/realtek-universal-audio-driver/tree/master/UAD/ThirdParty/Xperi
+
+
+### Realtek Audio Control & HP Audio Control
+
+https://github.com/alanfox2000/realtek-universal-audio-driver/releases
