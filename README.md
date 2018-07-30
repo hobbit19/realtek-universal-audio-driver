@@ -137,7 +137,7 @@ URI: ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99
 	| 10EC      | 0887      | 1043         | 8577         |
 	
 
-2. Install the UAD driver (Codec_XXXX folder)
+2. Install UAD driver (Codec_XXXX folder)
  
 	 HDXRT.inf
 	 
@@ -147,11 +147,17 @@ URI: ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99
 	 
 	`PnPUtil /i /a D:\UAD\Realtek\Codec_8501\HDXRTSST.inf`
 
-3. Install the Realtek Device Extension (CodecExtOem_RTK_XXXX folder)
+3. Install Realtek Device Extension (CodecExtOem_RTK_XXXX folder)
 
-	 HDXRTSST.inf
+	 HDX_GenericExt_RTK.inf
 	 
 	`PnPUtil /i /a D:\UAD\Realtek\CodecExtOem_RTK_8492\HDX_GenericExt_RTK.inf`
+
+3. Install Realtek Audio Effects Component (RealtekAPO_XXX folder), Realtek Hardware Support Application (RealtekHSA_xxx folder) and Realtek Audio Universal Service (RealtekService_XX folder)
+
+`PnPUtil /i /a D:\UAD\Realtek\RealtekAPO_635\RealtekAPO.inf`
+`PnPUtil /i /a D:\UAD\Realtek\RealtekASIO_4\RealtekASIO.inf`
+`PnPUtil /i /a D:\UAD\Realtek\RealtekService_92\RealtekService.inf`
 
 5. Install Realtek Audio Control / HP Audio Control using <a href="https://github.com/colinkiama/UWP-Package-Installer">UWP-Package-Installer</a> (<a href="http://puresoftapps.blogspot.com/2018/07/uwp-package-installer-easiest-way-to.html">Tutorial</a>)
 
