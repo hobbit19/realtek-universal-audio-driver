@@ -42,15 +42,15 @@ A. Using Universal Audio Driver Inf Editor
 
 2. Open Package, click "Open Package", select the parent folder which contains Realtek folders
 
- ##### Folder Struction
+	Folder Structure
 
-  ###### UAD (Parent Folder)
+	+ UAD (Parent Folder)
 
-   ###### > Realtek (Universal Audio Driver)
+		+ Realtek (Universal Audio Driver)
 
-   ###### > Setup Program (if you want Setup Program to install UAD)
+		+ Setup Program (if you want Setup Program to install UAD)
 
-   ###### > ThirtyParty (Required if your OEM PC have preinstall Realtek UAD with installed audio enhancer(s))
+		+ ThirtyParty (Required if your OEM PC have preinstall Realtek UAD with installed audio enhancer(s))
 
 3. Type Vender ID Device ID | SubVender ID | SubSystem ID, click "Check". If HardWare ID is not found, using Universal Audio Driver Inf Editor is not supported.
 
