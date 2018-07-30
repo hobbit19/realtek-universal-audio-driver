@@ -26,3 +26,8 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 ### Realtek Audio Control & HP Audio Control
 
 https://github.com/alanfox2000/realtek-universal-audio-driver/releases
+
+
+## Installation
+
+pnputil /i /a <PATHTOINF>
