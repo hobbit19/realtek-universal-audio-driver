@@ -72,8 +72,7 @@ A. Using Universal Audio Driver Inf Editor
 
    Right click InstallPackage.bat, run as administrator
 
-5. Install Realtek Audio Control / HP Audio Control using UWP-Package-Installer (tutorial)
-
+5. Install Realtek Audio Control / HP Audio Control using <a href="https://github.com/colinkiama/UWP-Package-Installer">UWP-Package-Installer</a> (<a href="http://puresoftapps.blogspot.com/2018/07/uwp-package-installer-easiest-way-to.html">Tutorial</a>)
 
 
 `pnputil /i /a <PATHTOINF>`
