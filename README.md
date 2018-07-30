@@ -4,6 +4,7 @@
 
 ## Table of Contents
 - [Lastest Infomation](#lastest-info)
+- [Requirement](#requirement)
 - [Download](#download)
 - [Installation](#installation)
 - [Uninstallation](#uninstallation)
@@ -19,6 +20,17 @@ https://forums.mydigitallife.net/threads/update-realtek-high-definition-audio.72
 Station-Drivers:
 
 https://www.station-drivers.com/index.php?option=com_kunena&view=topic&catid=18&id=17&Itemid=858&lang=en
+
+---------------------------------------
+
+<h2 id="requirement">Requirement</h2>
+
+Operating System: At least Windows 10 Version 1709 (64 Bit)
+
+
+Unintall Realtek HDA Driver first!!!
+
+Realtek HD Audio Codec Driver Patcher (A1) by Pihto (DTSi &DLL unlock) not work on UAD
 
 ---------------------------------------
 
