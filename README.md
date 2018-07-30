@@ -155,9 +155,12 @@ URI: ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99
 
 3. Install Realtek Audio Effects Component (RealtekAPO_XXX folder), Realtek Hardware Support Application (RealtekHSA_xxx folder) and Realtek Audio Universal Service (RealtekService_XX folder)
 
-`PnPUtil /i /a D:\UAD\Realtek\RealtekAPO_635\RealtekAPO.inf`
-`PnPUtil /i /a D:\UAD\Realtek\RealtekASIO_4\RealtekASIO.inf`
-`PnPUtil /i /a D:\UAD\Realtek\RealtekService_92\RealtekService.inf`
+	`PnPUtil /i /a D:\UAD\Realtek\RealtekAPO_635\RealtekAPO.inf`
+
+	`PnPUtil /i /a D:\UAD\Realtek\RealtekASIO_4\RealtekASIO.inf`
+
+	`PnPUtil /i /a D:\UAD\Realtek\RealtekService_92\RealtekService.inf`
+
 
 5. Install Realtek Audio Control / HP Audio Control using <a href="https://github.com/colinkiama/UWP-Package-Installer">UWP-Package-Installer</a> (<a href="http://puresoftapps.blogspot.com/2018/07/uwp-package-installer-easiest-way-to.html">Tutorial</a>)
 
