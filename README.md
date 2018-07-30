@@ -44,7 +44,7 @@ A. Using Universal Audio Driver Inf Editor
 
 Folder Struction
 
-> UAD (Parent Folder)
+UAD (Parent Folder)
 
 	> Realtek (Universal Audio Driver)
 
