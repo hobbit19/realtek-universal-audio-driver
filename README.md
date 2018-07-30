@@ -15,13 +15,17 @@
 
 <h2 id="lastest-info">Lastest Infomation</h2>
 
+Station-Drivers:
+
+https://www.station-drivers.com/index.php?option=com_kunena&view=topic&catid=18&id=17&Itemid=858&lang=en
+
 My Digital Life:
 
 https://forums.mydigitallife.net/threads/update-realtek-high-definition-audio.72236/
 
-Station-Drivers:
+LaptopVideo2Go
 
-https://www.station-drivers.com/index.php?option=com_kunena&view=topic&catid=18&id=17&Itemid=858&lang=en
+https://forums.laptopvideo2go.com/topic/24364-latest-realtek-audio-codecs
 
 ---------------------------------------
 
