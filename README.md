@@ -26,11 +26,11 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 
 * Xperi: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/realtek-universal-audio-driver/tree/master/UAD/ThirdParty/Xperi
 
-
 ### Realtek Audio Control & HP Audio Control
 
 https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
+---------------------------------------
 
 ## Installation
 
@@ -74,5 +74,26 @@ A. Using Universal Audio Driver Inf Editor
 
 5. Install Realtek Audio Control / HP Audio Control using <a href="https://github.com/colinkiama/UWP-Package-Installer">UWP-Package-Installer</a> (<a href="http://puresoftapps.blogspot.com/2018/07/uwp-package-installer-easiest-way-to.html">Tutorial</a>)
 
+B. Using PnPUtil (Only for user who have "Hardware ID is not found" error when using Universal Audio Driver Inf Editor)
 
-`pnputil /i /a <PATHTOINF>`
+1. Find the Device ID that match HDXRT.inf or HDXRTSST.inf in Codec_xxxx folder
+
+  Hardware ID = HDAUDIO\FUNC_01&VEN_10EC&DEV_0887&SUBSYS_10438577
+
+	| Vender ID | Device ID | SubVender ID | SubSystem ID |
+	|-----------|-----------|--------------|--------------|
+	| 10EC      | 0887      | 1043         | 8577         |
+	
+
+2. Install the UAD driver (Codec_XXXX folder)
+ 
+ HDXRT.inf
+`PnPUtil /i /a D:\UAD\Realtek\Codec_8501\HDXRT.inf`
+ 
+ HDXRTSST.inf
+`PnPUtil /i /a D:\UAD\Realtek\Codec_8501\HDXRTSST.inf`
+
+3. Install the Realtek Device Extension (CodecExtOem_RTK_XXXX folder)
+
+ HDXRTSST.inf
+`PnPUtil /i /a D:\UAD\Realtek\CodecExtOem_RTK_8492\HDX_GenericExt_RTK.inf`
