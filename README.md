@@ -45,15 +45,18 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 ### Control Panel
 
 Realtek Audio Control
+
 URL: https://www.microsoft.com/en-us/store/p/realtek-audio-control/9p2b8mcsvpln
+
 URI <a href="ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.RealtekAudioControl_dt26b99r8h8gj">ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.RealtekAudioControl_dt26b99r8h8gj</a>
 
 HP Audio Control
+
 URL: https://www.microsoft.com/en-us/p/hp-audio-control/9n77pw08dt9s
+
 URI: <a href="ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99r8h8gj">ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99r8h8gj</a>
 
-Github:
-https://github.com/alanfox2000/realtek-universal-audio-driver/releases
+Github: https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 ---------------------------------------
 
