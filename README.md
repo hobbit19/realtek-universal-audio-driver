@@ -102,7 +102,7 @@ URI: ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.HPAudioControl_dt26b99
 
 		+ Realtek (Universal Audio Driver)
 
-		+ Setup Program (if you want Setup Program to install UAD)
+		+ XSetup (Setup Program, if you want Setup Program to install UAD)
 
 		+ ThirtyParty (Required if your OEM PC have preinstall Realtek UAD with installed audio enhancer(s))
 
