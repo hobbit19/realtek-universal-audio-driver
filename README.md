@@ -54,6 +54,10 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 
 1.3.0: https://drop.me/B4bZmE
 
+### DriverStore Explorer [RAPR]
+
+https://github.com/lostindark/DriverStoreExplorer
+
 ### Third Party
 
 * All Third Party: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/realtek-universal-audio-driver/tree/master/UAD/ThirdParty
