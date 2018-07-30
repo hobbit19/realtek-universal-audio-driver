@@ -44,6 +44,10 @@ https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/
 
 https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/realtek-universal-audio-driver/tree/master/UAD/XSetup
 
+### Universal Audio Driver Inf Editor
+
+1.3.0: https://drop.me/B4bZmE
+
 ### Third Party
 
 * A-Volute: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/alanfox2000/realtek-universal-audio-driver/tree/master/UAD/ThirdParty/A-Volute
