@@ -52,17 +52,17 @@ A. Using Universal Audio Driver Inf Editor
 
 	> ThirtyParty (Required if your OEM PC have preinstall Realtek UAD with installed audio enhancer(s))
 
-2. Type Vender ID Device ID | SubVender ID | SubSystem ID, click "Check". If HardWare ID is not found, using Universal Audio Driver Inf Editor is not supported.
+3. Type Vender ID Device ID | SubVender ID | SubSystem ID, click "Check". If HardWare ID is not found, using Universal Audio Driver Inf Editor is not supported.
 
-Harware ID = HDAUDIO\FUNC_01&VEN_10EC&DEV_1220&SUBSYS_1458355D
+	Harware ID = HDAUDIO\FUNC_01&VEN_10EC&DEV_1220&SUBSYS_1458355D
 
-| Vender ID | Device ID | SubVender ID | SubSystem ID |
-|-----------|-----------|--------------|--------------|
-| 10EC      | 1220      | 1458         | 355D         |
+	| Vender ID | Device ID | SubVender ID | SubSystem ID |
+	|-----------|-----------|--------------|--------------|
+	| 10EC      | 1220      | 1458         | 355D         |
 
-3. Select "Setup program installation" or "INF installation", then click "Make Sausage"
+4. Select "Setup program installation" or "INF installation", then click "Make Sausage"
 
-4. Base on the two selections:
+5. Base on the two selections:
 
 + Setup program installation
 
