@@ -1,6 +1,10 @@
 # Realtek Universal Audio Driver (UAD)
 
-## Download
+- [Download](#download)
+- [Installation](#installation)
+- [Uninstallation](#uninstallation)
+
+<h2 id="download">Download</h2>
 
 ### Universal Audio Driver
 
@@ -32,7 +36,7 @@ https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 ---------------------------------------
 
-## Installation
+<h2 id="installation">Installation</h2>
 
 ### Universal Audio Driver
 
@@ -100,3 +104,34 @@ https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 	 HDXRTSST.inf
 	 
 	`PnPUtil /i /a D:\UAD\Realtek\CodecExtOem_RTK_8492\HDX_GenericExt_RTK.inf`
+
+---------------------------------------
+
+<h2 id="uninstallation">Uninstallation</h2>
+
+### A. Uninstall through Control Panel (for setup program installation only)
+
+1. Open Control Panel. Find "Realtek High Definition Audio Driver" , right click and select "Uninstall"
+
+### B. Uninstall through Device Manager and DriverStoreExplorer
+
+1. Stop "RtkAudioUniversalService" services on Task Manager
+
+2. Uninstall and delete all Realtek software component first
+
+![GITHUB](https://2.bp.blogspot.com/-T5210I3DARo/Wx_V59vt6HI/AAAAAAAAB_Y/0hb505aUk6QuHFO8y5-DGNiRp3WcPuBIgCLcBGAs/s1600/2.png)
+
+3. Uninstall and delete Realtek Audio Device 
+
+![GITHUB](https://1.bp.blogspot.com/-qRLK7Unoa3A/Wx_V5zVwy2I/AAAAAAAAB_U/0l-X3HKG2EEUZmBu8-k6UeomyD6PKs1ugCLcBGAs/s1600/1png.png)
+
+4. Open DriverStoreExplorer, delete Realtek Device Extension
+
+![GITHUB](https://2.bp.blogspot.com/-zHukGT061Pk/Wx_V6U7rmaI/AAAAAAAAB_g/2-AFCVXjaG4_-9ZfIwCBRQcAHhclRCWjQCLcBGAs/s1600/4.png)
+
+5. Run cmd as administrator, type `sc delete RtkAudioUniversalService`
+
+6. Rescan device
+
+![GITHUB](https://3.bp.blogspot.com/-u_FM2PXq7-0/Wx_V6IWAN5I/AAAAAAAAB_c/RSUXoaavcMkTjQx_EGh_-fL1fKZIvD7tQCLcBGAs/s1600/3.png)
+
