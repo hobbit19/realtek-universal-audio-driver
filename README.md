@@ -83,6 +83,7 @@ Realtek Audio Control / HP Audio Control require Microsoft.VCLibs.140.00 x64 app
 Download form Github: https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 Microsoft.VCLibs.140.00 14.0.25426.0 x64
+
 http://mdluup.ct8.pl/get.php?id=f76233f8-e4ac-4970-95ec-e9fcba50091e_rev.2
 
 Realtek Audio Control
