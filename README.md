@@ -61,11 +61,11 @@ Harware ID = HDAUDIO\FUNC_01&VEN_10EC&DEV_1220&SUBSYS_1458355D
 
 + Setup program installation
 
-Right click Setup.exe, run as administrator
+>> Right click Setup.exe, run as administrator
 
 + INF installation
 
-Right click InstallPackage.bat, run as administrator
+>> Right click InstallPackage.bat, run as administrator
 
 
 
