@@ -1,5 +1,6 @@
 # Realtek Universal Audio Driver (UAD)
 
+Table of Contents
 - [Download](#download)
 - [Installation](#installation)
 - [Uninstallation](#uninstallation)
