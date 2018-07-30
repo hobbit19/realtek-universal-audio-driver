@@ -76,7 +76,7 @@ Realtek Audio Control
 
 URL: https://www.microsoft.com/en-us/store/p/realtek-audio-control/9p2b8mcsvpln
 
-URI ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.RealtekAudioControl_dt26b99r8h8gj
+URI: ms-windows-store://pdp/?PFN=RealtekSemiconductorCorp.RealtekAudioControl_dt26b99r8h8gj
 
 HP Audio Control
 
