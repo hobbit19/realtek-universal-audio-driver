@@ -36,7 +36,7 @@ https://github.com/alanfox2000/realtek-universal-audio-driver/releases
 
 ### Universal Audio Driver
 
-A. Using Universal Audio Driver Inf Editor
+#### A. Using Universal Audio Driver Inf Editor
 
 1. Lanuch Universal Audio Driver Inf Editor
 
@@ -74,7 +74,7 @@ A. Using Universal Audio Driver Inf Editor
 
 5. Install Realtek Audio Control / HP Audio Control using <a href="https://github.com/colinkiama/UWP-Package-Installer">UWP-Package-Installer</a> (<a href="http://puresoftapps.blogspot.com/2018/07/uwp-package-installer-easiest-way-to.html">Tutorial</a>)
 
-B. Using PnPUtil (Only for user who have "Hardware ID is not found" error when using Universal Audio Driver Inf Editor)
+#### B. Using PnPUtil (Only for user who have "Hardware ID is not found" error when using Universal Audio Driver Inf Editor)
 
 1. Find the Device ID that match HDXRT.inf or HDXRTSST.inf in Codec_xxxx folder
 
