@@ -9,7 +9,7 @@ ClassGuid   = {e2f84ce7-8efa-411c-aa69-97454ca4cb57}
 Provider 	= %ManufacturerName%
 ExtensionId = {5C1EA76A-4030-4FDC-836B-7F441F095AFD}
 CatalogFile = dax3_ext_dolbyatmosspeakersystem.cat
-DriverVer = 06/25/2018,2.1001.217.0
+DriverVer = 07/15/2018,2.1001.218.0
 
 [Manufacturer]
 %ManufacturerName% = DeviceExtensions,NTamd64
