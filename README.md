@@ -27,6 +27,9 @@ LaptopVideo2Go
 
 https://forums.laptopvideo2go.com/topic/24364-latest-realtek-audio-codecs
 
+Lowyat.NET
+https://forum.lowyat.net/topic/658002
+
 ---------------------------------------
 
 <h2 id="requirement">Requirement</h2>
