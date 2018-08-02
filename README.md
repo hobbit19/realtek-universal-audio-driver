@@ -23,11 +23,12 @@ My Digital Life:
 
 https://forums.mydigitallife.net/threads/update-realtek-high-definition-audio.72236/
 
-LaptopVideo2Go
+LaptopVideo2Go:
 
 https://forums.laptopvideo2go.com/topic/24364-latest-realtek-audio-codecs
 
-Lowyat.NET
+Lowyat.NET:
+
 https://forum.lowyat.net/topic/658002
 
 ---------------------------------------
